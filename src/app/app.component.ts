@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Title} from '@angular/platform-browser';
 import {GameService} from './game.service';
-import {PreloadScene} from './scenes/preload';
+import {PreloadScene} from './scenes/preload.scene';
 import {TitleScene} from './scenes/title.scene';
 
 @Component({
