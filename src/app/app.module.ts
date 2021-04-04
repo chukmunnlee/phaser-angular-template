@@ -1,7 +1,9 @@
-import { NgModule } from '@angular/core';
+import { Injector, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import {GameService} from './game.service';
+import {Globals} from './utils/globals';
 
 @NgModule({
   declarations: [
@@ -10,7 +12,11 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ GameService ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+	constructor(injector: Injector) {
+		Globals.injector = injector
+	}
+}
